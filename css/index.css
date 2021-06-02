@@ -1,0 +1,93 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: 'Arial Black', Helvetica, sans-serif;
+
+}
+
+.fill {
+
+    position: relative;
+
+    font-size: 100px;
+
+    font-weight: bold;
+    
+    letter-spacing: 2px;
+
+    width: fit-content;
+
+    -webkit-text-fill-color: white;
+
+    -moz-text-fill-color: white;
+
+    -o-text-fill-color: white;
+
+    -ms-text-fill-color: white;
+
+    -webkit-text-stroke: 2px #444;
+
+    -moz-text-stroke: 2px #444;
+
+    -o-text-stroke: 2px #444;
+
+    -ms-text-stroke: 2px #444;
+
+}
+
+.fill::before {
+
+    content: attr( data-text );
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    overflow: hidden;
+
+    font-size: 100px;
+
+    font-weight: bold;
+    
+    letter-spacing: 2px;
+
+    -webkit-text-fill-color: #009688;
+
+    -moz-text-fill-color: #009688;
+
+    -o-text-fill-color: #009688;
+
+    -ms-text-fill-color: #009688;
+
+    transition: width .3s linear;
+
+}
+
+.fill:hover:before {
+
+    width: 100%;
+
+}
